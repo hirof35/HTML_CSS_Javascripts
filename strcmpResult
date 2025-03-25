@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字列比較</title>
+</head>
+<body>
+    <h2>文字列比較</h2>
+    <label>文字列1: <input type="text" id="name1"></label>
+    <label>文字列2: <input type="text" id="name2"></label><br><br>
+    <button id="compareBtn">比較する</button>
+    <p id="strcmpResult"></p> <!-- 比較結果を表示する場所 -->
+
+    <script>
+        window.onload = function() {
+            document.getElementById("compareBtn").addEventListener("click", function() {
+                let str1 = document.getElementById("name1").value;
+                let str2 = document.getElementById("name2").value;
+                
+                let result = (str1 === str2) ? "ok" : "no"; // 一致していれば"ok"、違えば"no"
+                document.getElementById("strcmpResult").innerText = "比較結果: " + result;
+            });
+        };
+    </script>
+</body>
+</html>
