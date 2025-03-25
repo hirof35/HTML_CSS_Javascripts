@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計算ツール</title>
+    <script src="hiko.js" defer></script>
+</head>
+<body>
+    <h1>ようこそ</h1>
+
+    <h2>最大公約数 (GCD) / 最小公倍数 (LCM)</h2>
+    <label>数値1: <input type="text" id="num1" value="0"></label>
+    <label>数値2: <input type="text" id="num2" value="0"></label><br>
+    <button id="gcdCheck">GCD 計算</button>
+    <button id="lcmCheck">LCM 計算</button>
+    <p id="gcdResult"></p>
+    <p id="lcmResult"></p>
+
+    <h2>素数判定 (Prime) / FizzBuzz</h2>
+    <label>数値: <input type="text" id="num3" value="0"></label><br>
+    <button id="primeCheck">素数判定</button>
+    <button id="fizzbuzzCheck">FizzBuzz</button>
+    <p id="primeResult"></p>
+    <p id="fizzbuzzResult"></p>
+</body>
+</html>
