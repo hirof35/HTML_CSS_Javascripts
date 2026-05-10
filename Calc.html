@@ -3,25 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>計算ツール</title>
-    <script src="hiko.js" defer></script>
+    <title>Math Utility Tool</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; background: #f4f7f6; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        h1, h2 { color: #333; }
+        input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 5px; }
+        input[type="number"] { width: 100px; }
+        button { padding: 8px 15px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px; transition: 0.2s; }
+        button:hover { background: #0056b3; }
+        .result { margin-top: 10px; font-weight: bold; color: #d32f2f; min-height: 1.2em; }
+    </style>
+    <script src="Calc.js" defer></script>
 </head>
 <body>
-    <h1>ようこそ</h1>
+    <h1>Math Utility Tool</h1>
 
-    <h2>最大公約数 (GCD) / 最小公倍数 (LCM)</h2>
-    <label>数値1: <input type="text" id="num1" value="0"></label>
-    <label>数値2: <input type="text" id="num2" value="0"></label><br>
-    <button id="gcdCheck">GCD 計算</button>
-    <button id="lcmCheck">LCM 計算</button>
-    <p id="gcdResult"></p>
-    <p id="lcmResult"></p>
+    <!-- 数値計算セクション -->
+    <div class="card">
+        <h2>GCD (最大公約数) / LCM (最小公倍数)</h2>
+        <input type="number" id="num1" placeholder="数値1">
+        <input type="number" id="num2" placeholder="数値2">
+        <div style="margin-top: 10px;">
+            <button id="gcdCheck">GCD 計算</button>
+            <button id="lcmCheck">LCM 計算</button>
+        </div>
+        <p id="mathResult" class="result"></p>
+    </div>
 
-    <h2>素数判定 (Prime) / FizzBuzz</h2>
-    <label>数値: <input type="text" id="num3" value="0"></label><br>
-    <button id="primeCheck">素数判定</button>
-    <button id="fizzbuzzCheck">FizzBuzz</button>
-    <p id="primeResult"></p>
-    <p id="fizzbuzzResult"></p>
+    <!-- 論理判定セクション -->
+    <div class="card">
+        <h2>素数判定 / FizzBuzz</h2>
+        <!-- class="num3" を id="num3" に修正しました -->
+        <input type="number" id="num3" placeholder="数値">
+        <div style="margin-top: 10px;">
+            <button id="primeCheck">素数判定</button>
+            <button id="fizzbuzzCheck">FizzBuzz</button>
+        </div>
+        <p id="logicResult" class="result"></p>
+    </div>
+
+    <!-- 文字列比較セクション (追加分) -->
+    <div class="card">
+        <h2>文字列比較 (String Compare)</h2>
+        <input type="text" id="name1" placeholder="文字列1">
+        <input type="text" id="name2" placeholder="文字列2">
+        <div style="margin-top: 10px;">
+            <button id="compareBtn">比較実行</button>
+        </div>
+        <p id="strcmpResult" class="result"></p>
+    </div>
 </body>
 </html>
